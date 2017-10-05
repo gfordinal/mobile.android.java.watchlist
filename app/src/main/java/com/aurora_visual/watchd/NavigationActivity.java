@@ -33,6 +33,9 @@ public class NavigationActivity extends AppCompatActivity {
     };
 
     @Override
+    // call super
+    // initialize widgets
+    // set event listener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
