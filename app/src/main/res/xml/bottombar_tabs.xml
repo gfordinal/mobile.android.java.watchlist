@@ -11,13 +11,14 @@
             id="@+id/tab_library"
             icon="@drawable/library_tab_icon"
             title="@string/nav_library"
-            barColorWhenSelected="#d7d7d7" />
+            barColorWhenSelected="#e4e4e4" />
 
         <tab
             id="@+id/tab_settings"
             icon="@drawable/settings_tab_icon"
             title="@string/nav_settings"
-            barColorWhenSelected="#cfcfcf" />
+            activeColor="#e4e4e4"
+            barColorWhenSelected="#434343" />
 
         <tab
             id="@+id/tab_account"
