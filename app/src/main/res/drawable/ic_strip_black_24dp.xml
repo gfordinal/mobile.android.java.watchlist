@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="128.000000"
+    android:viewportHeight="128.000000">
+
+    <group
+            android:translateY="128.000000"
+            android:scaleX="0.100000"
+            android:scaleY="-0.100000">
+        <path
+            android:fillColor="#000000"
+            android:strokeWidth="1"
+            android:pathData="M90 640 l0 -615 65 3 64 4 3 66 3 67 70 0 70 0 3 -68 3 -67 269 0 269 0 3 68 3 67
+70 0 70 0 3 -67 3 -66 64 -4 65 -3 0 615 0 615 -65 -3 -64 -4 -3 -66 -3 -67 -70 0
+-70 0 -3 68 -3 67 -269 0 -269 0 -3 -67 -3 -68 -70 0 -70 0 -3 67 -3 66 -64 4 -65
+3 0 -615z m280 275 l0 -75 -75 0 -75 0 0 75 0 75 75 0 75 0 0 -75z m690 0 l0 -75
+-75 0 -75 0 0 75 0 75 75 0 75 0 0 -75z m-690 -275 l0 -70 -75 0 -75 0 0 70 0 70
+75 0 75 0 0 -70z m690 0 l0 -70 -75 0 -75 0 0 70 0 70 75 0 75 0 0 -70z m-690 -275
+l0 -75 -75 0 -75 0 0 75 0 75 75 0 75 0 0 -75z m690 0 l0 -75 -75 0 -75 0 0 75 0
+75 75 0 75 0 0 -75z" />
+    </group>
+</vector>

@@ -8,4 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Stub to avoid crashes below v21 -->
+    <style name="AppTheme.TransNav" parent="AppTheme" />
+
 </resources>

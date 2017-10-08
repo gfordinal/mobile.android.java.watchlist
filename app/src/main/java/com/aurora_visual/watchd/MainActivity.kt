@@ -3,12 +3,40 @@ package com.aurora_visual.watchd
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
-import android.view.MenuItem
 import android.widget.TextView
+import com.roughike.bottombar.BottomBar
+import com.roughike.bottombar.OnTabSelectListener
+import android.support.annotation.IdRes
+import com.aurora_visual.watchd.R.id.bottomBar
+import com.aurora_visual.watchd.R.id.bottomBar
+import com.aurora_visual.watchd.R.id.bottomBar
 
-class NavigationActivity : AppCompatActivity() {
+
+
+
+
+
+
+class MainActivity : AppCompatActivity() {
 
     private var mTextMessage: TextView? = null
+
+    private val mOnTabSelectListener = OnTabSelectListener { tabId ->
+        when (tabId) {
+            R.id.tab_home -> {
+                mTextMessage!!.setText(R.string.nav_home)
+            }
+            R.id.tab_library -> {
+                mTextMessage!!.setText(R.string.nav_library)
+            }
+            R.id.tab_settings -> {
+                mTextMessage!!.setText(R.string.nav_settings)
+            }
+            R.id.tab_account -> {
+                mTextMessage!!.setText(R.string.nav_account)
+            }
+        }
+    }
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
@@ -33,11 +61,11 @@ class NavigationActivity : AppCompatActivity() {
             // set event listener
     fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_navigation)
+        setContentView(R.layout.activity_main)
 
         mTextMessage = findViewById(R.id.message) as TextView
-        val navigation = findViewById(R.id.navigation) as BottomNavigationView
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+        val bottomBar = findViewById(R.id.bottomBar) as BottomBar
+        bottomBar.setOnTabSelectListener(mOnTabSelectListener)
     }
 
 }

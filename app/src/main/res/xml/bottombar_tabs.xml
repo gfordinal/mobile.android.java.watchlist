@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <tabs>
+        <tab
+            id="@+id/tab_home"
+            icon="@drawable/home_tab_icon"
+            title="@string/nav_home"
+            barColorWhenSelected="#ffffff" />
+
+        <tab
+            id="@+id/tab_library"
+            icon="@drawable/library_tab_icon"
+            title="@string/nav_library"
+            barColorWhenSelected="#fcfcfc" />
+
+        <tab
+            id="@+id/tab_settings"
+            icon="@drawable/settings_tab_icon"
+            title="@string/nav_settings"
+            barColorWhenSelected="#fafafa" />
+
+        <tab
+            id="@+id/tab_account"
+            icon="@drawable/account_tab_icon"
+            title="@string/nav_account"
+            barColorWhenSelected="#f8f8f8" />
+    </tabs>
+</PreferenceScreen>

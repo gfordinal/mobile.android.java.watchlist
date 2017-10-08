@@ -4,7 +4,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="nav_home">Home</string>
-    <string name="nav_library">Bibliothek</string>
+    <string name="nav_library">Sammlung</string>
     <string name="nav_settings">Einstellungen</string>
     <string name="nav_account">Konto</string>
 </resources>
