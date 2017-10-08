@@ -32,6 +32,10 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         app:bb_tabXmlResource="@xml/bottombar_tabs"
-        app:bb_behavior="underNavbar"/>
+        app:bb_inActiveTabAlpha="1"
+        app:bb_inActiveTabColor="@color/colorTabInactive"
+        app:bb_activeTabColor="@color/colorTabActive"
+        app:bb_behavior="underNavbar"
+        app:bb_showShadow="false"/>
 
 </LinearLayout>

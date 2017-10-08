@@ -5,24 +5,24 @@
             id="@+id/tab_home"
             icon="@drawable/home_tab_icon"
             title="@string/nav_home"
-            barColorWhenSelected="#ffffff" />
+            barColorWhenSelected="#e4e4e4" />
 
         <tab
             id="@+id/tab_library"
             icon="@drawable/library_tab_icon"
             title="@string/nav_library"
-            barColorWhenSelected="#fcfcfc" />
+            barColorWhenSelected="#d7d7d7" />
 
         <tab
             id="@+id/tab_settings"
             icon="@drawable/settings_tab_icon"
             title="@string/nav_settings"
-            barColorWhenSelected="#fafafa" />
+            barColorWhenSelected="#cfcfcf" />
 
         <tab
             id="@+id/tab_account"
             icon="@drawable/account_tab_icon"
             title="@string/nav_account"
-            barColorWhenSelected="#f8f8f8" />
+            barColorWhenSelected="#ffffff" />
     </tabs>
 </PreferenceScreen>
