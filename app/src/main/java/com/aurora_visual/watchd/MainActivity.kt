@@ -11,12 +11,6 @@ import com.aurora_visual.watchd.R.id.bottomBar
 import com.aurora_visual.watchd.R.id.bottomBar
 import com.aurora_visual.watchd.R.id.bottomBar
 
-
-
-
-
-
-
 class MainActivity : AppCompatActivity() {
 
     private var mTextMessage: TextView? = null
@@ -28,6 +22,14 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.tab_library -> {
                 mTextMessage!!.setText(R.string.nav_library)
+
+                // Begin the transaction
+                val ft = supportFragmentManager.beginTransaction()
+                // Replace the contents of the container with the new fragment
+                ft.replace(R.id.library_content, LibraryCategoryFragment())
+                // or ft.add(R.id.your_placeholder, new FooFragment());
+                // Complete the changes added above
+                ft.commit()
             }
             R.id.tab_settings -> {
                 mTextMessage!!.setText(R.string.nav_settings)
@@ -38,27 +40,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
-        when (item.itemId) {
-            R.id.navigation_home -> {
-                mTextMessage!!.setText(R.string.title_home)
-                return@OnNavigationItemSelectedListener true
-            }
-            R.id.navigation_dashboard -> {
-                mTextMessage!!.setText(R.string.title_dashboard)
-                return@OnNavigationItemSelectedListener true
-            }
-            R.id.navigation_notifications -> {
-                mTextMessage!!.setText(R.string.title_notifications)
-                return@OnNavigationItemSelectedListener true
-            }
-        }
-        false
-    }
-
-    override // call super
-            // initialize widgets
-            // set event listener
+    // call super
+    // initialize widgets
+    // set event listener
+    override
     fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

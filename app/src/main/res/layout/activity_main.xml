@@ -9,7 +9,7 @@
     tools:context="com.aurora_visual.watchd.MainActivity">
 
     <FrameLayout
-        android:id="@+id/content"
+        android:id="@+id/library_content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
@@ -22,9 +22,16 @@
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="@string/title_home" />
+            android:text="@string/nav_home" />
 
     </FrameLayout>
+
+
+    <fragment
+        android:name="com.aurora_visual.watchd.LibraryCategoryFragment"
+        android:id="@+id/categoryFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <com.roughike.bottombar.BottomBar
         android:id="@+id/bottomBar"

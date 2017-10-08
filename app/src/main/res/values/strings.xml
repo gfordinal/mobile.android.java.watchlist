@@ -1,10 +1,13 @@
 <resources>
+    <!-- App Labels -->
     <string name="app_name">Watch\'d</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+
+    <!-- Navigation Items -->
     <string name="nav_home">Home</string>
     <string name="nav_library">Sammlung</string>
     <string name="nav_settings">Einstellungen</string>
     <string name="nav_account">Konto</string>
+
+    <!-- Library Root Menu -->
+    <string name="unnamed_category">Kategorie</string>
 </resources>
