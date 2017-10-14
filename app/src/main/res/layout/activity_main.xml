@@ -6,32 +6,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.aurora_visual.watchd.MainActivity">
+    tools:context="com.aurora_visual.watchd.activities.MainActivity"
+    android:fitsSystemWindows="false">
 
     <FrameLayout
         android:id="@+id/library_content"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingTop="0dp">
 
-        <TextView
-            android:id="@+id/message"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="@string/nav_home" />
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+
+        <!--<android.support.constraint.ConstraintLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+            <!---->
+        <!--</android.support.constraint.ConstraintLayout>-->
+
+
+        <!--<fragment-->
+            <!--android:name="com.aurora_visual.watchd.LibraryCategoryFragment"-->
+            <!--android:id="@+id/categoryFragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
 
     </FrameLayout>
-
-
-    <fragment
-        android:name="com.aurora_visual.watchd.LibraryCategoryFragment"
-        android:id="@+id/categoryFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
     <com.roughike.bottombar.BottomBar
         android:id="@+id/bottomBar"
