@@ -2,6 +2,7 @@ package com.aurora_visual.watchd.activities
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.GridLayoutManager
 import android.widget.TextView
 import com.roughike.bottombar.OnTabSelectListener
 import android.support.v7.widget.LinearLayoutManager
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     private var categoriesList: ArrayList<Category> = ArrayList()
     private lateinit var imageRequester: ImageRequester
 
-    private lateinit var linearLayoutManager: LinearLayoutManager
+    private lateinit var gridLayoutManager: LinearLayoutManager
     private lateinit var adapter: RecyclerAdapter
 
 
@@ -58,8 +59,8 @@ class MainActivity : AppCompatActivity() {
 
         bottomBar.setOnTabSelectListener(mOnTabSelectListener)
 
-        linearLayoutManager = LinearLayoutManager(this)
-        recyclerView.layoutManager = linearLayoutManager
+        gridLayoutManager = GridLayoutManager(this, 2)
+        recyclerView.layoutManager = gridLayoutManager
         adapter = RecyclerAdapter(categoriesList)
         recyclerView.adapter = adapter
     }

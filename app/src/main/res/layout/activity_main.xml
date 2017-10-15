@@ -14,7 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:paddingTop="0dp">
+        android:paddingTop="0dp"
+        android:fitsSystemWindows="true">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerView"
@@ -27,13 +28,6 @@
             <!--android:layout_height="match_parent">-->
             <!---->
         <!--</android.support.constraint.ConstraintLayout>-->
-
-
-        <!--<fragment-->
-            <!--android:name="com.aurora_visual.watchd.LibraryCategoryFragment"-->
-            <!--android:id="@+id/categoryFragment"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content" />-->
 
     </FrameLayout>
 
