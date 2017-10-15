@@ -9,13 +9,21 @@
     tools:context="com.aurora_visual.watchd.activities.MainActivity"
     android:fitsSystemWindows="false">
 
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorPrimary" />
+
     <FrameLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:paddingTop="0dp"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="false">
 
     </FrameLayout>
 

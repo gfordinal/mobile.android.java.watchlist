@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.Toolbar
 import com.roughike.bottombar.OnTabSelectListener
 import com.aurora_visual.watchd.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -54,6 +55,9 @@ class MainActivity : AppCompatActivity() {
     fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        setSupportActionBar(toolbar)
+        supportActionBar!!.title = resources.getString(R.string.app_name)
 
         bottomBar.setOnTabSelectListener(mOnTabSelectListener)
     }
