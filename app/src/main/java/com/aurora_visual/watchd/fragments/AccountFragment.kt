@@ -2,21 +2,9 @@ package com.aurora_visual.watchd
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
 import android.view.LayoutInflater
 import android.view.View
-import com.aurora_visual.watchd.adapters.RecyclerAdapter
-import com.aurora_visual.watchd.models.Category
-import com.aurora_visual.watchd.network.ImageRequester
-import kotlinx.android.synthetic.main.fragment_library_root.*
-import java.io.IOException
-import java.util.ArrayList
-import android.support.v7.widget.DefaultItemAnimator
-
-
 
 
 /**

@@ -1,8 +1,10 @@
 package com.aurora_visual.watchd.models
 
 
+import android.content.Context
+import android.content.res.Resources
+import com.aurora_visual.watchd.R
 import org.json.JSONException
-import org.json.JSONObject
 import java.io.Serializable
 import java.text.ParseException
 import java.text.SimpleDateFormat
@@ -11,22 +13,21 @@ import java.util.*
 /**
  * Created by admin on 14.10.17.
  */
-class Category(categoryName: String) : Serializable {
+class Category(type: Enum<Categories>, res: Resources) : Serializable {
 
-    lateinit var name: String
+    lateinit var res: Resources
+     var name: String? = null
+        private set
+        get() = this.title()
+    lateinit var type: Enum<Categories>
         private set
 
     private lateinit var photoDate: String
-    lateinit var humanDate: String
-        private set
-    lateinit var explanation: String
-        private set
-    lateinit var url: String
-        private set
 
     init {
         try {
-            name = categoryName
+            this.res = res
+            this.type = type
 //            photoDate = photoJSON.getString(PHOTO_DATE)
 //            humanDate = convertDateToHumanDate()
 //            explanation = photoJSON.getString(PHOTO_EXPLANATION)
@@ -35,6 +36,17 @@ class Category(categoryName: String) : Serializable {
             e.printStackTrace()
         }
 
+    }
+
+    private fun title(): String {
+        when (type) {
+            Categories.MOVIES       -> { return res.getString(R.string.category_movies) }
+            Categories.COLLECTIONS  -> { return res.getString(R.string.category_collections) }
+            Categories.SERIES       -> { return res.getString(R.string.category_series) }
+            Categories.PEOPLE       -> { return res.getString(R.string.category_people) }
+        }
+
+        return res.getString(R.string.unnamed_category)
     }
 
     private fun convertDateToHumanDate(): String {
@@ -54,9 +66,11 @@ class Category(categoryName: String) : Serializable {
     }
 
     companion object {
-        private val NAME = "name"
-        private val PHOTO_DATE = "date"
-        private val PHOTO_EXPLANATION = "explanation"
-        private val PHOTO_URL = "url"
+        private val CATEGORY_MOVIES = "movies"
+        private val CATEGORY_COLLECTIONS = "collections"
+        private val CATEGORY_SERIES = "series"
+        private val CATEGORY_PEOPLE = "people"
     }
 }
+
+enum class Categories { MOVIES, COLLECTIONS, SERIES, PEOPLE }

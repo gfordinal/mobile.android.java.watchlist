@@ -10,4 +10,19 @@
 
     <!-- Library Root Menu -->
     <string name="unnamed_category">Kategorie</string>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <!-- MOVIES -->
+    <string name="category_movies">Filme</string>
+
+    <!-- COLLECTIONS -->
+    <string name="category_collections">Filmsammmlungen</string>
+
+    <!-- SERIES -->
+    <string name="category_series">Serien</string>
+
+    <!-- PEOPLE -->
+    <string name="category_people">Personen</string>
+
 </resources>

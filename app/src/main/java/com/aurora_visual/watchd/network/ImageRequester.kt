@@ -2,8 +2,10 @@ package com.aurora_visual.watchd.network
 
 import android.app.Activity
 import android.content.Context
+import android.content.res.Resources
 import android.net.Uri.Builder
 import com.aurora_visual.watchd.R
+import com.aurora_visual.watchd.models.Categories
 import com.aurora_visual.watchd.models.Category
 import okhttp3.*
 import org.json.JSONException
@@ -65,7 +67,7 @@ class ImageRequester(listeningActivity: Activity) {
                     calendar.add(Calendar.DAY_OF_YEAR, -1)
 
                     if (photoJSON.getString(MEDIA_TYPE_KEY) != MEDIA_TYPE_VIDEO_VALUE) {
-                        val receivedPhoto = Category("WAS: photoJSON")
+                        val receivedPhoto = Category(Categories.MOVIES, null as Resources)
                         responseListener.receivedNewPhoto(receivedPhoto)
                         isLoadingData = false
                     } else {
