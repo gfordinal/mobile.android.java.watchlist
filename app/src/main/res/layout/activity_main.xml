@@ -10,24 +10,12 @@
     android:fitsSystemWindows="false">
 
     <FrameLayout
-        android:id="@+id/library_content"
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:paddingTop="0dp"
         android:fitsSystemWindows="true">
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="vertical"/>
-
-        <!--<android.support.constraint.ConstraintLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent">-->
-            <!---->
-        <!--</android.support.constraint.ConstraintLayout>-->
 
     </FrameLayout>
 

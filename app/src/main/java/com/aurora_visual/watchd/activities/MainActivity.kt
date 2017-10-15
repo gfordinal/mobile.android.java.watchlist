@@ -1,11 +1,13 @@
 package com.aurora_visual.watchd.activities
 
+import android.support.v4.app.Fragment
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.widget.TextView
 import com.roughike.bottombar.OnTabSelectListener
 import android.support.v7.widget.LinearLayoutManager
+import com.aurora_visual.watchd.LibraryRootFragment
 import com.aurora_visual.watchd.R
 import com.aurora_visual.watchd.adapters.RecyclerAdapter
 import com.aurora_visual.watchd.models.Category
@@ -17,36 +19,26 @@ import java.util.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
-    private var categoriesList: ArrayList<Category> = ArrayList()
-    private lateinit var imageRequester: ImageRequester
-
-    private lateinit var gridLayoutManager: LinearLayoutManager
-    private lateinit var adapter: RecyclerAdapter
-
-
     private val mOnTabSelectListener = OnTabSelectListener { tabId ->
-//        when (tabId) {
-//            R.id.tab_home -> {
-//                category_title!!.setText(R.string.nav_home)
-//            }
-//            R.id.tab_library -> {
-//                category_title!!.setText(R.string.nav_library)
-//
-////                // Begin the transaction
-////                val ft = supportFragmentManager.beginTransaction()
-////                // Replace the contents of the container with the new fragment
-////                ft.replace(R.id.library_content, LibraryCategoryFragment())
-////                // or ft.add(R.id.your_placeholder, new FooFragment());
-////                // Complete the changes added above
-////                ft.commit()
-//            }
-//            R.id.tab_settings -> {
-//                category_title!!.setText(R.string.nav_settings)
-//            }
-//            R.id.tab_account -> {
-//                category_title!!.setText(R.string.nav_account)
-//            }
-//        }
+        var fragment: Fragment? = null
+
+        when (tabId) {
+            R.id.tab_home       -> { /* fragment = ... */ }
+            R.id.tab_library    -> { fragment = LibraryRootFragment() }
+            R.id.tab_settings   -> { /* fragment = ... */ }
+            R.id.tab_account    -> { /* fragment = ... */ }
+        }
+
+        // append fragment to #content
+        if(fragment != null) {
+            // Begin the transaction
+            val ft = supportFragmentManager.beginTransaction()
+            // Replace the contents of the container with the new fragment
+            ft.replace(R.id.content, fragment)
+            // or ft.add(R.id.your_placeholder, new FooFragment());
+            // Complete the changes added above
+            ft.commit()
+        }
     }
 
     // call super
@@ -58,46 +50,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         bottomBar.setOnTabSelectListener(mOnTabSelectListener)
-
-        gridLayoutManager = GridLayoutManager(this, 2)
-        recyclerView.layoutManager = gridLayoutManager
-        adapter = RecyclerAdapter(categoriesList)
-        recyclerView.adapter = adapter
-    }
-
-    override fun onStart() {
-        super.onStart()
-
-        if (categoriesList.size == 0) {
-            requestCategory()
-        }
-    }
-
-    private fun requestCategory() {
-        try {
-            var cat = Category("Filme")
-            receivedNewCategory(cat)
-
-            cat = Category("Personen")
-            receivedNewCategory(cat)
-
-            cat = Category("Serien")
-            receivedNewCategory(cat)
-
-            cat = Category("Filmreihen")
-            receivedNewCategory(cat)
-//            imageRequester.getPhoto()
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-
-    }
-
-    fun receivedNewCategory(newPhoto: Category) {
-        runOnUiThread {
-            categoriesList.add(newPhoto)
-            adapter.notifyItemInserted(categoriesList.size)
-        }
     }
 
 }
