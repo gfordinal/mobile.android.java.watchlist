@@ -6,4 +6,29 @@
 
     <color name="colorTabActive">#434343</color>
     <color name="colorTabInactive">#8d8d8d</color>
+
+    <color name="mainActivityBackground">#f5f5f5</color>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <!-- HOME VIEW -->
+    <!--<color name="homeTabText">#e4e4e4</color>-->
+    <color name="homeTabActive">#e4e4e4</color>
+    <color name="homeBackground">#f5f5f5</color>
+
+    <!-- LIBRARY VIEW -->
+    <!--<color name="libraryTabText">#e4e4e4</color>-->
+    <color name="libraryTabActive">#e4e4e4</color>
+    <color name="libraryBackground">#f5f5f5</color>
+
+    <!-- SETTINGS VIEW -->
+    <color name="settingsTabText">#e4e4e4</color>
+    <color name="settingsTabActive">#434343</color>
+    <color name="settingsBackground">#565656</color>
+
+    <!-- ACCOUNT VIEW -->
+    <!--<color name="accountTabText">#e4e4e4</color>-->
+    <color name="accountTabActive">#ffffff</color>
+    <color name="accountBackground">#f1f1f1</color>
+
 </resources>
